@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Distance Unofficial Level Editor Guide</title>
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<div class="header">
+		<img src="images/banner.png"/>
+	</div>
+
+	<div class="nav">
+		<ul>
+			<li><a href="#basic-level-creation">Basic level creation</a></li>
+			<li><a href="#adding-decorations">Adding decorations</a></li>
+			<li><a href="#obstacles">Obstacles</a></li>
+			<li><a href="#finishing-touches">Finishing touches</a></li>
+			<li><a href="#glossary">Glossary</a></li>
+		</ul>
+	</div>
+
+	<div class="left-image-separator"></div>
+
+	<div class="main-content">
+		<div class="section">
+			<h2>Introduction</h2>
+			The unofficial Distance level editor guidebook is an easy to access way of learning about the many tools available to you in the level editor. But besides describing many of the individual tools and functions in the editor. It also provides you with a step-by-step formula to creating your first level.<br><br>
+
+			That being said there are many different ways to approach level editing, and the one portrayed throughout this guide is just one of those many.<br><br>
+
+			In this guide we will try to cover as many basic functions of the in-game editor as possible. Should you stumble upon something you think is missing, or outdated even. Please do not hesitate to contact us so we can update the guide accordingly.<br><br>
+		</div>
+
+		<a name="basic-level-creation"></a>
+		<h1>Basic Level Creation</h1>
+		<div class="section">
+			<h2>The Very Basics</h2>
+			<div class="big-image">
+				<img class="gfyitem" data-id="UnluckySophisticatedGreathornedowl" data-controls="false" />
+			</div>
+			The first thing to do is delete the LevelEditorCarSpawner that comes with a new level. You won't really need it, as the beginning piece will automatically spawn a car there. You can use the LevelEditorCarSpawner to test the track starting from a certain point, though.<br><br>
+
+			Every sprint level needs a start point. Enter the "Roads" folder in the library and double click on <b>EmpireStartZone</b>. This will place the beginning of the track at the cursor.<br><br>
+
+			Double click on <b>EmpireSplineRoadStraight</b> to add a straight piece of track. If you have a road piece selected, such as the EmpireStartZone, and you add a new road piece, it will automatically be connected to the end of the track.<br><br>
+
+			Try adding other types of road pieces! You can change the orientation of a road piece by selecting it and pressing F.<br><br>
+
+			Let's see how things look so far. Press ~ to test your level!<br><br>
+		</div>
+
+		<div class="section">
+			<h2>Checkpoints</h2>
+			<div class="big-image">
+				<img class="gfyitem" data-id="ReliableSelfassuredBordercollie" data-controls="false" />
+			</div>
+			Before we continue, we need to start getting in the habit of adding checkpoints.<br><br>
+
+			First, right click the surface of a straight piece of road to move the cursor there. Right clicking any physical object moves the cursor to that point and rotates it so it's pointing to the surface of whatever you right-clicked.<br><br>
+
+			Next, double click <b>EmpireCheckpoint</b> in the browser. We have a checkpoint now! Checkpoints reset the cooldown of the car, and placing these properly is an important part of the flow of a level. We need to make sure the checkpoint is oriented properly, though. The orientation of the car when it respawns is dependent on the orientation of the checkpoint. If the checkpoint is backwards, the car will respawn backwards! If your checkpoint is facing the wrong way, use the rotation functions in the <b>Transform</b> menu. This is a really easy mistake to make (I do it all the time), so be careful about this.<br><br>
+
+			Now, select the checkpoint and press <b>Shift+A</b>. This will attach the checkpoint to the track. This means if you move the track, the checkpoint will follow it. Also, you can press <b>M</b> and move the mouse to move the checkpoint along the track. This method is the best way to place objects while keeping their orientation relative to the road correct. You can also place more checkpoints by duplicating (<b>Ctrl+D</b>) the first one and moving them along the track (this way, you won't have to worry about backwards checkpoints).<br><br>
+		</div>
+
+		<div class="section">
+			<h2>Track Nodes</h2>
+			<div class="big-image">
+				<img class="gfyitem" data-id="CalmSimplisticAmurratsnake" data-controls="false" />
+			</div>
+			So far we've only used the stock road pieces. Let's try manipulating the road pieces ourselves!<br><br>
+
+			Add a new <b>EmpireSplineRoadStraight</b> to the end of the track. You'll notice that there are green rectangles marking the beginning and end of every road piece. These are <b>track nodes</b>. Select the node at the end of the piece you just added. You can manipulate these in any way that you can manipulate any other object!<br><br>
+
+			There are three different tools you can use to transform objects: the <b>move</b> tool, the <b>rotate</b> tool, and the <b>scale</b> tool. You can switch between these by pressing <b>Q</b>, <b>W</b>, and <b>E</b>, respectively. Try manipulating the nodes in different ways! The tracks will morph to fit the nodes properly. You can also manipulate the nodes between already-placed pieces of track, and it works the same way.<br><br>
+		</div>
+
+		<div class="section">
+			<h2>Multiple paths</h2>
+			<div class="big-image">
+				<img class="gfyitem" data-id="TautUncommonBlackandtancoonhound" data-controls="false" />
+			</div>
+			Time to add some branching paths. Add an <b>EmpireRoadTriSplit</b> to the end of the track. This piece is different from the previous track pieces we've used in that it has 3 nodes. To add track pieces to a specific node, just click that node and that add the track you want. This works for all sorts of track pieces.<br><br>
+
+			Now we want to make the branching paths meet back up later without the track getting crooked. Duplicate the EmpireRoadTriSplit (<b>Ctrl+D</b>). Whenever you duplicate an object, you can move the mouse to move the new object around freely, but we don't want this, so press <b>ESC</b> to exit this mode. Instead, use the move gizmo to move the new EmpireRoadTriSplit in the direction of the track. Then, go to <b>Tools>Rotate Object 180 around Y axis</b> in the menu bar. This flips the object around so it's facing the other way. Move this object as far away from the track as you want.<br><br>
+
+			You're going to be able to make your branching paths so they end up pretty close to the second TriSplit, but you won't be able to make them match up exactly. So let's connect some nodes together. To connect two nodes, select the node you want to move, and then hold <b>shift</b> and select the node you want to connect it to. Press <b>ENTER</b> to snap the nodes together. <u>The node you selected first always moves to meet the node you selected second.</u><br><br>
+
+			You can also select the road piece itself before selecting the first node. When you press enter, the entire road piece will move to so that the two nodes connect.<br><br>
+		</div>
+
+		<a name="finishing-touches"></a>
+		<h1>Finishing touches</h1>
+
+		<div class="section">
+			<h2>Uploading to Steam Workshop</h2>
+			Is your level done? It's time to upload it, then! First, check a few things:
+			<ul>
+				<li>Make sure your level has a proper title.</li>
+				<li>Make sure you've marked the modes this level can be played in (you can find this in the level settings tab).</li>
+			</ul>
+
+			Position the camera in the editor to be a good preview of the map! This will be used as the thumbnail for the level on the workshop. Once you've done this, click Save and Publish to Steam Workshop in the menu on the right. Also, be sure to edit the description for the level once it's published! Nobody wants to play a track that says it's "an awesome community level."
+		</div>
+
+		<a name="glossary"></a>
+		<h1>Glossary</h1>
+
+		<div class="section">
+			<h2>UI elements</h2>
+
+			<div class="left-image">
+				<img src="images/cursor.png"/>
+				<b>The cursor</b>: The cursor is where your mouse cursor or "hand" is placed in the level. Objects that you double click on in the library will be spawned at the cursor.<br><br>
+			</div>
+
+			<div class="left-image-separator"></div>
+
+			<div class="left-image">
+				<img src="images/level_gizmo.png"/>
+				<b>Level gizmo</b>: The level gizmo can be used to control from which angle you see your level. By clicking on the different axes you can snap to that view angle. Clicking the grey box in the middle of the level gizmo will switch between the Perspective and Orthographic camera modes.
+			</div>
+
+			<div class="left-image-separator"></div>
+
+			<h2>Objects</h2>
+
+			<div class="left-image">
+				<img src="images/car.png"/>
+				<b>LevelEditorCarSpawner:</b> The car spawner is primarily used to playtest your level. Keep in mind though, that this is only where you start when testing the level in the editor or when creating a stunt or tag level. Sprint and Challenge levels will always spawn the car at the EmpireStartZone object when you're actually playing the level.
+			</div>
+
+		</div>
+
+		<div class="section">
+			<h2>Keyboard shortcuts</h2>
+
+			<table width="100%">
+				<tr>
+					<td>Test level</td>
+					<td>~</td>
+				</tr>
+				<tr>
+					<td>Move tool</td>
+					<td>Q</td>
+				</tr>
+				<tr>
+					<td>Rotate tool</td>
+					<td>W</td>
+				</tr>
+				<tr>
+					<td>Scale tool</td>
+					<td>E</td>
+				</tr>
+				<tr>
+					<td>Copy</td>
+					<td>Ctrl+C</td>
+				</tr>
+				<tr>
+					<td>Paste</td>
+					<td>Ctrl+V</td>
+				</tr>
+				<tr>
+					<td>Undo</td>
+					<td>Ctrl+Z</td>
+				</tr>
+				<tr>
+					<td>Duplicate</td>
+					<td>Ctrl+D</td>
+				</tr>
+				<tr>
+					<td>Attach</td>
+					<td>Shift+A</td>
+				</tr>
+				<tr>
+					<td>Move (attached objects)</td>
+					<td>M</td>
+				</tr>
+				<tr>
+					<td>Align to cursor's rotation</td>
+					<td>Alt+S</td>
+				</tr>
+				<tr>
+					<td>Toggle node display</td>
+					<td>T</td>
+				</tr>
+				<tr>
+					<td>Zoom in on selected object</td>
+					<td>Middle-click</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="section">
+			<h2>Credits</h2>
+			This guide is written by Krispy (@KrispyVG) and Tesselode (@aspinach). Banner art by Jam (@QuixoticJam).
+		</div>
+	</div>
+
+
+</body>
+</html>
+
+<!--gyfcat embed-->
+<script>
+ (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = 'http://assets.gfycat.com/js/gfyajax-0.517d.js';
+    s.parentNode.insertBefore(g, s);
+}(document, 'script'));
+</script>

@@ -1,0 +1,80 @@
+body {
+	font-family: 'PT Sans';
+	font-size: 18px;
+	color: white;
+	background-color: black;
+}
+
+.header {
+	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*navigation bar*/
+.nav {
+	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.nav li {
+	float: left;
+	border: solid;
+	border-width: 1px;
+	border-color: gray;
+	border-radius: 3px;
+	margin: 5px;
+	width: 18%;
+	text-align: center;
+}
+
+.nav a {
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+.nav a:hover {
+	background-color: #02324E;
+}
+
+/*main content*/
+.main-content {
+	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section {
+	background-color: #02324E;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	overflow: auto;
+}
+
+/*arranging images*/
+.left-image img {
+	float: left;
+	width: 20%;
+	margin-right: 10px;
+}
+
+.left-image-separator {
+	clear: left;
+	padding: 10px;
+}
+
+.big-image {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
