@@ -3,8 +3,23 @@
 	src: url(fonts/BebasNeue.otf);
 }
 
+@font-face {
+	font-family: Petita Bold;
+	src: url(fonts/PetitaBold.ttf);
+}
+
+@font-face {
+	font-family: Petita Medium;
+	src: url(fonts/PetitaMedium.ttf);
+}
+
+@font-face {
+	font-family: Petita Light;
+	src: url(fonts/PetitaLight.ttf);
+}
+
 body {
-	font-family: 'PT Sans';
+	font-family: 'Petita Medium';
 	font-size: 18px;
 	color: white;
 	background-color: black;
