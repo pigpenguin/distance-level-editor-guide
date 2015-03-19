@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="header">
-		<img src="images/banner.png"/>
+		<img src="images/banner/banner.png"/>
 	</div>
 
 	<div class="nav">
@@ -114,6 +114,10 @@
 			Set the cursor to a straight piece of track. Then, go to the "Infected obstacles" folder in the "obstacles" folder, and add a <b>VirusLaserTriCircleRotating</b>. If you want to move it to a curved piece of track, you can attach it to the road (<b>Shift+A</b>) and move it (<b>M</b>) wherever you like, just like with checkpoints.<br/><br/>
 
 			If you test the level (<b>~</b>), you'll notice that the lasers rotate back and forth. You can change the speed of the rotation, among other things. Go back to the editor, and click the obstacle to select it. Then click the <b>properties</b> tab in the menu on the right-hand side. Scroll down to the section "RigidbodyAxisRotationLogic". There, you can change various aspects about how the lasers rotate. Try increasing AngularSpeed and RotationBounds. You can use the arrows on the side of the text field, click and drag, or enter a number directly. Then test the level. The lasers should be rotating farther and faster than before.
+
+			<div class="infobox">
+				Every object is made up of different <b>components</b>, and these are what the different sections represent in the properties tab. The component system is just a result of Distance using the engine Unity, and it's not super important for the user. Just know that each section is a different "building block" of the object.
+			</div>
 		</div>
 
 		<div class="section">
@@ -127,6 +131,44 @@
 			Position the camera in the editor to be a good preview of the map! This will be used as the thumbnail for the level on the workshop. Once you've done this, click Save and Publish to Steam Workshop in the menu on the right. Also, be sure to edit the description for the level once it's published! Nobody wants to play a track that says it's "an awesome community level."
 		</div>
 
+		<span id='visuals'></span>
+		<h1>Visuals</h1>
+		<div class="mininav">
+			<a data-scroll href="#visuals1">Themes</a>
+			<a data-scroll href="#visuals2">Colors</a>	
+		</div>
+
+		<span id="visuals1"></span>
+		<div class="section">
+			<h2>Themes</h2>
+			Its a good idea to work with a theme in mind. There are lots of different ways to combine visual elements and create a unique theme. A level with a unique theme can go long way to making it a better overall level. But there are also loads of really good levels that work with some of the "basic" themes, or even the default theme of Distance! Here are 3 examples of levels with different themes.
+
+			<div class="big-image">
+				<img src="images/screenshots/247.jpg">
+				<b>Broken Symmetry</b> (official level)
+			</div>
+
+			Broken Symmetry uses empire buildings, empire and glass roads, and only a minor change in the overall color scheme. The level is one of the only official levels that uses a greenish color scheme perhaps to convey the feeling of being safe starting out.
+
+			<div class="big-image">
+				<img src="images/screenshots/contraband.jpg">
+				<b>Contraband Delivery</b> by Quargzon
+			</div>
+
+			Contraband Delivery uses posters with all the colors in the rainbow to simulate a real world city and its commercial billboards. Reflective surfaces are used to illustrate gigantic "office" buildings. It also uses dense fog (to simulate pollution), dark buildings, and a ton of decorational girders.
+
+			<div class="big-image">
+				<img src="images/screenshots/cubic.jpg">
+				<b>Cubic</b> by Da Ham
+			</div>
+
+			Cubic uses its theme to convey a dystopian future vibe. It uses gray colors with all white-ish emitters and lights. Only one or 2 actual building models and a bright yellow color to capture the players attention whenever needed.<br/><br/>
+
+			As you can see a well thought out theme will not only make your level prettier. It can also help you tell a story or set the mood.<br><br>
+
+			The best themes are the ones tailored for the level they are applied to. So take your time and get the theme just right, so that you feel it accomplishes what you want with the level.
+		</div>
+
 		<span id='glossary'></span>
 		<h1>Glossary</h1>
 
@@ -134,14 +176,14 @@
 			<h2>UI elements</h2>
 
 			<div class="left-image">
-				<img src="images/cursor.png"/>
+				<img src="images/glossary/cursor.png"/>
 				<b>The cursor</b>: The cursor is where your mouse cursor or "hand" is placed in the level. Objects that you double click on in the library will be spawned at the cursor.<br/><br/>
 			</div>
 
 			<div class="left-image-separator"></div>
 
 			<div class="left-image">
-				<img src="images/level_gizmo.png"/>
+				<img src="images/glossary/level_gizmo.png"/>
 				<b>Level gizmo</b>: The level gizmo can be used to control from which angle you see your level. By clicking on the different axes you can snap to that view angle. Clicking the grey box in the middle of the level gizmo will switch between the Perspective and Orthographic camera modes.
 			</div>
 
@@ -150,7 +192,7 @@
 			<h2>Objects</h2>
 
 			<div class="left-image">
-				<img src="images/car.png"/>
+				<img src="images/glossary/car.png"/>
 				<b>LevelEditorCarSpawner:</b> The car spawner is primarily used to playtest your level. Keep in mind though, that this is only where you start when testing the level in the editor or when creating a stunt or tag level. Sprint and Challenge levels will always spawn the car at the EmpireStartZone object when you're actually playing the level.
 			</div>
 

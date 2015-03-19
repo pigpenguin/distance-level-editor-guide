@@ -69,7 +69,7 @@ h2 {
 
 /*mini navigation bar*/
 .mininav {
-	color: #333333;
+	color: #555555;
 	text-align: center;
 	margin-bottom: 20px;
 	transition: color 0.1s;
@@ -131,4 +131,9 @@ h2 {
 	margin-right: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	text-align: center;
+}
+
+.big-image img {
+	max-width: 800px;
 }
