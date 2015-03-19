@@ -58,9 +58,13 @@
 
 			First, right click the surface of a straight piece of road to move the cursor there. Right clicking any physical object moves the cursor to that point and rotates it so it's pointing to the surface of whatever you right-clicked.<br><br>
 
-			Next, double click <b>EmpireCheckpoint</b> in the browser. We have a checkpoint now! Checkpoints reset the cooldown of the car, and placing these properly is an important part of the flow of a level. We need to make sure the checkpoint is oriented properly, though. The orientation of the car when it respawns is dependent on the orientation of the checkpoint. If the checkpoint is backwards, the car will respawn backwards! If your checkpoint is facing the wrong way, use the rotation functions in the <b>Transform</b> menu. This is a really easy mistake to make (I do it all the time), so be careful about this.<br><br>
+			Next, double click <b>EmpireCheckpoint</b> in the browser. We have a checkpoint now! Checkpoints reset the cooldown of the car, and placing these properly is an important part of the flow of a level.
 
-			Now, select the checkpoint and press <b>Shift+A</b>. This will attach the checkpoint to the track. This means if you move the track, the checkpoint will follow it. Also, you can press <b>M</b> and move the mouse to move the checkpoint along the track. This method is the best way to place objects while keeping their orientation relative to the road correct. You can also place more checkpoints by duplicating (<b>Ctrl+D</b>) the first one and moving them along the track (this way, you won't have to worry about backwards checkpoints).<br><br>
+			<div class="infobox">
+				Make sure the checkpoint is oriented properly! The orientation of the car when it respawns is dependent on the orientation of the checkpoint. If the checkpoint is backwards, the car will respawn backwards! If your checkpoint is facing the wrong way, use the rotation functions in the <b>Transform</b> menu. This is a really easy mistake to make (I do it all the time), so be careful about this.
+			</div>
+
+			Now, select the checkpoint and press <b>Shift+A</b>. This will attach the checkpoint to the track. This means if you move the track, the checkpoint will follow it. Also, you can press <b>M</b> and move the mouse to move the checkpoint along the track. This method is the best way to place objects while keeping their orientation relative to the road correct. You can also place more checkpoints by duplicating (<b>Ctrl+D</b>) the first one and moving them along the track (this way, you won't have to worry about backwards checkpoints).
 		</div>
 
 		<div class="section">
@@ -72,7 +76,7 @@
 
 			Add a new <b>EmpireSplineRoadStraight</b> to the end of the track. You'll notice that there are green rectangles marking the beginning and end of every road piece. These are <b>track nodes</b>. Select the node at the end of the piece you just added. You can manipulate these in any way that you can manipulate any other object!<br><br>
 
-			There are three different tools you can use to transform objects: the <b>move</b> tool, the <b>rotate</b> tool, and the <b>scale</b> tool. You can switch between these by pressing <b>W</b>, <b>E</b>, and <b>R</b>, respectively. Try manipulating the nodes in different ways! The tracks will morph to fit the nodes properly. You can also manipulate the nodes between already-placed pieces of track, and it works the same way.<br><br>
+			There are three different tools you can use to transform objects: the <b>move</b> tool, the <b>rotate</b> tool, and the <b>scale</b> tool. You can switch between these by pressing <b>W</b>, <b>E</b>, and <b>R</b>, respectively. Try manipulating the nodes in different ways! The tracks will morph to fit the nodes properly. You can also manipulate the nodes between already-placed pieces of track, and it works the same way.
 		</div>
 
 		<div class="section">
@@ -86,7 +90,19 @@
 
 			You're going to be able to make your branching paths so they end up pretty close to the second TriSplit, but you won't be able to make them match up exactly. So let's connect some nodes together. To connect two nodes, select the node you want to move, and then hold <b>shift</b> and select the node you want to connect it to. Press <b>ENTER</b> to snap the nodes together. <u>The node you selected first always moves to meet the node you selected second.</u><br><br>
 
-			You can also select the road piece itself before selecting the first node. When you press enter, the entire road piece will move to so that the two nodes connect.<br><br>
+			You can also select the road piece itself before selecting the first node. When you press enter, the entire road piece will move to so that the two nodes connect.
+		</div>
+
+		<div class="section">
+			<h2>Obstacles</h2>
+			<div class="big-image">
+				<img class="gfyitem" data-id="GorgeousTornJoey" data-controls="false" />
+			</div>
+			Obstacles are placed just like any other object. You can find them in the "Obstacles" folder. Let's add some spinny lasers!<br><br>
+
+			Set the cursor to a straight piece of track. Then, go to the "Infected obstacles" folder in the "obstacles" folder, and add a <b>VirusLaserTriCircleRotating</b>. If you want to move it to a curved piece of track, you can attach it to the road (<b>Shift+A</b>) and move it (<b>M</b>) wherever you like, just like with checkpoints.<br><br>
+
+			If you test the level (<b>~</b>), you'll notice that the lasers rotate back and forth. You can change the speed of the rotation, among other things. Go back to the editor, and click the obstacle to select it. Then click the <b>properties</b> tab in the menu on the right-hand side. Scroll down to the section "RigidbodyAxisRotationLogic". There, you can change various aspects about how the lasers rotate. Try increasing AngularSpeed and RotationBounds. You can use the arrows on the side of the text field, click and drag, or enter a number directly. Then test the level. The lasers should be rotating farther and faster than before.
 		</div>
 
 		<div class="section">

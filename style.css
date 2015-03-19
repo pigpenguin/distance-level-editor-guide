@@ -1,3 +1,4 @@
+/*general stuff*/
 @font-face {
 	font-family: Bebas Neue;
 	src: url(fonts/BebasNeue.otf);
@@ -80,6 +81,14 @@ h1 {
 .section {
 	background-color: #02324E;
 	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	overflow: auto;
+}
+
+.infobox {
+	background-color: #046299;
+	margin: 20px;
 	padding: 10px;
 	border-radius: 5px;
 	overflow: auto;
