@@ -12,10 +12,10 @@
 
 	<div class="nav">
 		<ul>
-			<li><a href="#basics">The basics</a></li>
-			<li><a href="#visuals">Visuals</a></li>
-			<li><a href="#design">Level design</a></li>
-			<li><a href="#glossary">Glossary</a></li>
+			<li><a data-scroll href="#basics">The basics</a></li>
+			<li><a data-scroll href="#visuals">Visuals</a></li>
+			<li><a data-scroll href="#design">Level design</a></li>
+			<li><a data-scroll href="#glossary">Glossary</a></li>
 		</ul>
 	</div>
 
@@ -24,39 +24,50 @@
 	<div class="main-content">
 		<div class="section">
 			<h2>Introduction</h2>
-			The unofficial Distance level editor guidebook is an easy to access way of learning about the many tools available to you in the level editor. But besides describing many of the individual tools and functions in the editor. It also provides you with a step-by-step formula to creating your first level.<br><br>
+			The unofficial Distance level editor guidebook is an easy to access way of learning about the many tools available to you in the level editor. But besides describing many of the individual tools and functions in the editor. It also provides you with a step-by-step formula to creating your first level.<br/><br/>
 
-			That being said there are many different ways to approach level editing, and the one portrayed throughout this guide is just one of those many.<br><br>
+			That being said there are many different ways to approach level editing, and the one portrayed throughout this guide is just one of those many.<br/><br/>
 
-			In this guide we will try to cover as many basic functions of the in-game editor as possible. Should you stumble upon something you think is missing, or outdated even. Please do not hesitate to contact us so we can update the guide accordingly.<br><br>
+			In this guide we will try to cover as many basic functions of the in-game editor as possible. Should you stumble upon something you think is missing, or outdated even. Please do not hesitate to contact us so we can update the guide accordingly.
 		</div>
 
-		<a name="basics"></a>
+		<span id='basics'></span>
 		<h1>Basic Level Creation</h1>
+		<div class="mininav">
+			<a data-scroll href="#basics1">The Very Basics</a>
+			<a data-scroll href="#basics2">Checkpoints</a>	
+			<a data-scroll href="#basics3">Track Nodes</a>
+			<a data-scroll href="#basics4">Multiple Paths</a>
+			<a data-scroll href="#basics5">Obstacles</a>
+			<a data-scroll href="#basics6">Uploading to Steam Workshop</a>
+		</div>
+
+		<span id='basics1'></span>
 		<div class="section">
 			<h2>The Very Basics</h2>
 			<div class="big-image">
 				<img class="gfyitem" data-id="UnluckySophisticatedGreathornedowl" data-controls="false" />
 			</div>
-			The first thing to do is delete the LevelEditorCarSpawner that comes with a new level. You won't really need it, as the beginning piece will automatically spawn a car there. You can use the LevelEditorCarSpawner to test the track starting from a certain point, though.<br><br>
+			The first thing to do is delete the LevelEditorCarSpawner that comes with a new level. You won't really need it, as the beginning piece will automatically spawn a car there. You can use the LevelEditorCarSpawner to test the track starting from a certain point, though.<br/><br/>
 
-			Every sprint level needs a start point. Enter the "Roads" folder in the library and double click on <b>EmpireStartZone</b>. This will place the beginning of the track at the cursor.<br><br>
+			Every sprint level needs a start point. Enter the "Roads" folder in the library and double click on <b>EmpireStartZone</b>. This will place the beginning of the track at the cursor.<br/><br/>
 
-			Double click on <b>EmpireSplineRoadStraight</b> to add a straight piece of track. If you have a road piece selected, such as the EmpireStartZone, and you add a new road piece, it will automatically be connected to the end of the track.<br><br>
+			Double click on <b>EmpireSplineRoadStraight</b> to add a straight piece of track. If you have a road piece selected, such as the EmpireStartZone, and you add a new road piece, it will automatically be connected to the end of the track.<br/><br/>
 
-			Try adding other types of road pieces! You can change the orientation of a road piece by selecting it and pressing F.<br><br>
+			Try adding other types of road pieces! You can change the orientation of a road piece by selecting it and pressing F.<br/><br/>
 
-			Let's see how things look so far. Press ~ to test your level!<br><br>
+			Let's see how things look so far. Press ~ to test your level!<br/><br/>
 		</div>
 
+		<span id='basics2'></span>
 		<div class="section">
 			<h2>Checkpoints</h2>
 			<div class="big-image">
 				<img class="gfyitem" data-id="ReliableSelfassuredBordercollie" data-controls="false" />
 			</div>
-			Before we continue, we need to start getting in the habit of adding checkpoints.<br><br>
+			Before we continue, we need to start getting in the habit of adding checkpoints.<br/><br/>
 
-			First, right click the surface of a straight piece of road to move the cursor there. Right clicking any physical object moves the cursor to that point and rotates it so it's pointing to the surface of whatever you right-clicked.<br><br>
+			First, right click the surface of a straight piece of road to move the cursor there. Right clicking any physical object moves the cursor to that point and rotates it so it's pointing to the surface of whatever you right-clicked.<br/><br/>
 
 			Next, double click <b>EmpireCheckpoint</b> in the browser. We have a checkpoint now! Checkpoints reset the cooldown of the car, and placing these properly is an important part of the flow of a level.
 
@@ -67,40 +78,43 @@
 			Now, select the checkpoint and press <b>Shift+A</b>. This will attach the checkpoint to the track. This means if you move the track, the checkpoint will follow it. Also, you can press <b>M</b> and move the mouse to move the checkpoint along the track. This method is the best way to place objects while keeping their orientation relative to the road correct. You can also place more checkpoints by duplicating (<b>Ctrl+D</b>) the first one and moving them along the track (this way, you won't have to worry about backwards checkpoints).
 		</div>
 
+		<span id='basics3'></span>
 		<div class="section">
 			<h2>Track Nodes</h2>
 			<div class="big-image">
 				<img class="gfyitem" data-id="CalmSimplisticAmurratsnake" data-controls="false" />
 			</div>
-			So far we've only used the stock road pieces. Let's try manipulating the road pieces ourselves!<br><br>
+			So far we've only used the stock road pieces. Let's try manipulating the road pieces ourselves!<br/><br/>
 
-			Add a new <b>EmpireSplineRoadStraight</b> to the end of the track. You'll notice that there are green rectangles marking the beginning and end of every road piece. These are <b>track nodes</b>. Select the node at the end of the piece you just added. You can manipulate these in any way that you can manipulate any other object!<br><br>
+			Add a new <b>EmpireSplineRoadStraight</b> to the end of the track. You'll notice that there are green rectangles marking the beginning and end of every road piece. These are <b>track nodes</b>. Select the node at the end of the piece you just added. You can manipulate these in any way that you can manipulate any other object!<br/><br/>
 
 			There are three different tools you can use to transform objects: the <b>move</b> tool, the <b>rotate</b> tool, and the <b>scale</b> tool. You can switch between these by pressing <b>W</b>, <b>E</b>, and <b>R</b>, respectively. Try manipulating the nodes in different ways! The tracks will morph to fit the nodes properly. You can also manipulate the nodes between already-placed pieces of track, and it works the same way.
 		</div>
 
+		<span id='basics4'></span>
 		<div class="section">
 			<h2>Multiple paths</h2>
 			<div class="big-image">
 				<img class="gfyitem" data-id="TautUncommonBlackandtancoonhound" data-controls="false" />
 			</div>
-			Time to add some branching paths. Add an <b>EmpireRoadTriSplit</b> to the end of the track. This piece is different from the previous track pieces we've used in that it has 3 nodes. To add track pieces to a specific node, just click that node and that add the track you want. This works for all sorts of track pieces.<br><br>
+			Time to add some branching paths. Add an <b>EmpireRoadTriSplit</b> to the end of the track. This piece is different from the previous track pieces we've used in that it has 3 nodes. To add track pieces to a specific node, just click that node and that add the track you want. This works for all sorts of track pieces.<br/><br/>
 
-			Now we want to make the branching paths meet back up later without the track getting crooked. Duplicate the EmpireRoadTriSplit (<b>Ctrl+D</b>). Whenever you duplicate an object, you can move the mouse to move the new object around freely, but we don't want this, so press <b>ESC</b> to exit this mode. Instead, use the move gizmo to move the new EmpireRoadTriSplit in the direction of the track. Then, go to <b>Tools>Rotate Object 180 around Y axis</b> in the menu bar. This flips the object around so it's facing the other way. Move this object as far away from the track as you want.<br><br>
+			Now we want to make the branching paths meet back up later without the track getting crooked. Duplicate the EmpireRoadTriSplit (<b>Ctrl+D</b>). Whenever you duplicate an object, you can move the mouse to move the new object around freely, but we don't want this, so press <b>ESC</b> to exit this mode. Instead, use the move gizmo to move the new EmpireRoadTriSplit in the direction of the track. Then, go to <b>Tools>Rotate Object 180 around Y axis</b> in the menu bar. This flips the object around so it's facing the other way. Move this object as far away from the track as you want.<br/><br/>
 
-			You're going to be able to make your branching paths so they end up pretty close to the second TriSplit, but you won't be able to make them match up exactly. So let's connect some nodes together. To connect two nodes, select the node you want to move, and then hold <b>shift</b> and select the node you want to connect it to. Press <b>ENTER</b> to snap the nodes together. <u>The node you selected first always moves to meet the node you selected second.</u><br><br>
+			You're going to be able to make your branching paths so they end up pretty close to the second TriSplit, but you won't be able to make them match up exactly. So let's connect some nodes together. To connect two nodes, select the node you want to move, and then hold <b>shift</b> and select the node you want to connect it to. Press <b>ENTER</b> to snap the nodes together. <u>The node you selected first always moves to meet the node you selected second.</u><br/><br/>
 
 			You can also select the road piece itself before selecting the first node. When you press enter, the entire road piece will move to so that the two nodes connect.
 		</div>
 
+		<span id='basics5'></span>
 		<div class="section">
 			<h2>Obstacles</h2>
 			<div class="big-image">
 				<img class="gfyitem" data-id="GorgeousTornJoey" data-controls="false" />
 			</div>
-			Obstacles are placed just like any other object. You can find them in the "Obstacles" folder. Let's add some spinny lasers!<br><br>
+			Obstacles are placed just like any other object. You can find them in the "Obstacles" folder. Let's add some spinny lasers!<br/><br/>
 
-			Set the cursor to a straight piece of track. Then, go to the "Infected obstacles" folder in the "obstacles" folder, and add a <b>VirusLaserTriCircleRotating</b>. If you want to move it to a curved piece of track, you can attach it to the road (<b>Shift+A</b>) and move it (<b>M</b>) wherever you like, just like with checkpoints.<br><br>
+			Set the cursor to a straight piece of track. Then, go to the "Infected obstacles" folder in the "obstacles" folder, and add a <b>VirusLaserTriCircleRotating</b>. If you want to move it to a curved piece of track, you can attach it to the road (<b>Shift+A</b>) and move it (<b>M</b>) wherever you like, just like with checkpoints.<br/><br/>
 
 			If you test the level (<b>~</b>), you'll notice that the lasers rotate back and forth. You can change the speed of the rotation, among other things. Go back to the editor, and click the obstacle to select it. Then click the <b>properties</b> tab in the menu on the right-hand side. Scroll down to the section "RigidbodyAxisRotationLogic". There, you can change various aspects about how the lasers rotate. Try increasing AngularSpeed and RotationBounds. You can use the arrows on the side of the text field, click and drag, or enter a number directly. Then test the level. The lasers should be rotating farther and faster than before.
 		</div>
@@ -124,7 +138,7 @@
 
 			<div class="left-image">
 				<img src="images/cursor.png"/>
-				<b>The cursor</b>: The cursor is where your mouse cursor or "hand" is placed in the level. Objects that you double click on in the library will be spawned at the cursor.<br><br>
+				<b>The cursor</b>: The cursor is where your mouse cursor or "hand" is placed in the level. Objects that you double click on in the library will be spawned at the cursor.<br/><br/>
 			</div>
 
 			<div class="left-image-separator"></div>
@@ -222,4 +236,10 @@
     g.src = 'http://assets.gfycat.com/js/gfyajax-0.517d.js';
     s.parentNode.insertBefore(g, s);
 }(document, 'script'));
+</script>
+
+<!--smooth scrolling-->
+<script src="dist/js/smooth-scroll.js"></script>
+<script>
+    smoothScroll.init();
 </script>

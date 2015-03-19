@@ -1,4 +1,4 @@
-/*general stuff*/
+/*fonts*/
 @font-face {
 	font-family: Bebas Neue;
 	src: url(fonts/BebasNeue.otf);
@@ -19,6 +19,7 @@
 	src: url(fonts/PetitaLight.ttf);
 }
 
+/*general stuff*/
 body {
 	font-family: 'Petita Medium';
 	font-size: 18px;
@@ -29,7 +30,9 @@ body {
 h1 {
 	font-family: 'Bebas Neue';
 	font-weight: lighter;
-	font-size: 40px;
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 0px;
 }
 
 .header {
@@ -43,18 +46,17 @@ h1 {
 	width: 1024px;
 	margin-left: auto;
 	margin-right: auto;
+	transition: background-color 0.1s;
 }
 
 .nav ul {
 	list-style-type: none;
-	padding: 0;
+	padding: 0px;
 }
 
 .nav li {
 	float: left;
-	border: solid;
-	border-width: 1px;
-	border-color: gray;
+	border: 1px solid gray;
 	border-radius: 3px;
 	margin: 5px;
 	width: 23%;
@@ -69,6 +71,29 @@ h1 {
 
 .nav a:hover {
 	background-color: #02324E;
+}
+
+/*mini navigation bar*/
+.mininav {
+	color: #333333;
+	text-align: center;
+	margin-bottom: 20px;
+	transition: color 0.1s;
+}
+
+.mininav:hover {
+	color: #888888;
+}
+
+.mininav a {
+	color: inherit;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+}
+
+.mininav a:hover {
+	color: #FFFFFF;
 }
 
 /*main content*/
