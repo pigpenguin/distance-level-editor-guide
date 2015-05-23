@@ -21,8 +21,9 @@
 
 /*general stuff*/
 body {
-	font-family: 'Petita Medium';
-	font-size: 18px;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	line-height: 140%;
 	color: white;
 	background-color: black;
 }
