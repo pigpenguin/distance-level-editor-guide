@@ -22,11 +22,15 @@
 	<div class="main-content">
 		<div class="section">
 			<h2>Introduction</h2>
-			The unofficial Distance level editor guidebook is an easy to access way of learning about the many tools available to you in the level editor. But besides describing many of the individual tools and functions in the editor. It also provides you with a step-by-step formula to creating your first level.<br/><br/>
-
-			That being said there are many different ways to approach level editing, and the one portrayed throughout this guide is just one of those many.<br/><br/>
-
-			In this guide we will try to cover as many basic functions of the in-game editor as possible. Should you stumble upon something you think is missing, or outdated even. Please do not hesitate to contact us so we can update the guide accordingly.
+			<p>
+				The unofficial Distance level editor guidebook is an easy to access way of learning about the many tools available to you in the level editor. But besides describing many of the individual tools and functions in the editor. It also provides you with a step-by-step formula to creating your first level.
+			</p>
+			<p>
+				That being said there are many different ways to approach level editing, and the one portrayed throughout this guide is just one of those many.
+			</p>
+			<p>
+				In this guide we will try to cover as many basic functions of the in-game editor as possible. Should you stumble upon something you think is missing, or outdated even. Please do not hesitate to contact us so we can update the guide accordingly.
+			</p>
 		</div>
 
 		<span id='basics'></span>
@@ -46,15 +50,21 @@
 			<div class="big-image">
 				<img class="gfyitem" data-id="TimelySaltyItaliangreyhound" data-controls="false" />
 			</div>
-			The first thing to do is delete the LevelEditorCarSpawner that comes with a new level. You won't really need it, as the beginning piece will automatically spawn a car there. You can use the LevelEditorCarSpawner to test the track starting from a certain point, though.<br/><br/>
-
-			Every sprint level needs a start point. Enter the "Roads" folder in the library and double click on <b>EmpireStartZone</b>. This will place the beginning of the track at the cursor.<br/><br/>
-
-			Double click on <b>EmpireSplineRoadStraight</b> to add a straight piece of track. If you have a road piece selected, such as the EmpireStartZone, and you add a new road piece, it will automatically be connected to the end of the track.<br/><br/>
-
-			Try adding other types of road pieces! You can change the orientation of a road piece by selecting it and pressing F.<br/><br/>
-
-			Let's see how things look so far. Press ~ to test your level!<br/><br/>
+			<p>
+				The first thing to do is delete the LevelEditorCarSpawner that comes with a new level. You won't really need it, as the beginning piece will automatically spawn a car there. You can use the LevelEditorCarSpawner to test the track starting from a certain point, though.
+			</p>
+			<p>
+				Every sprint level needs a start point. Enter the "Roads" folder in the library and double click on <b>EmpireStartZone</b>. This will place the beginning of the track at the cursor.
+			</p>
+			<p>
+				Double click on <b>EmpireSplineRoadStraight</b> to add a straight piece of track. If you have a road piece selected, such as the EmpireStartZone, and you add a new road piece, it will automatically be connected to the end of the track.
+			</p>
+			<p>
+				Try adding other types of road pieces! You can change the orientation of a road piece by selecting it and pressing F.
+			</p>
+			<p>
+				Let's see how things look so far. Press ~ to test your level!
+			</p>
 		</div>
 
 		<span id='basics2'></span>
@@ -63,17 +73,21 @@
 			<div class="big-image">
 				<img class="gfyitem" data-id="DearFirmBarnowl" data-controls="false" />
 			</div>
-			Before we continue, we need to start getting in the habit of adding checkpoints.<br/><br/>
-
-			First, right click the surface of a straight piece of road to move the cursor there. Right clicking any physical object moves the cursor to that point and rotates it so it's pointing to the surface of whatever you right-clicked.<br/><br/>
-
-			Next, double click <b>EmpireCheckpoint</b> in the browser. We have a checkpoint now! Checkpoints reset the cooldown of the car, and placing these properly is an important part of the flow of a level.
-
+			<p>
+				Before we continue, we need to start getting in the habit of adding checkpoints.
+			</p>
+			<p>
+				First, right click the surface of a straight piece of road to move the cursor there. Right clicking any physical object moves the cursor to that point and rotates it so it's pointing to the surface of whatever you right-clicked.
+			</p>
+			<p>
+				Next, double click <b>EmpireCheckpoint</b> in the browser. We have a checkpoint now! Checkpoints reset the cooldown of the car, and placing these properly is an important part of the flow of a level.
+			</p>
 			<div class="infobox">
 				Make sure the checkpoint is oriented properly! The orientation of the car when it respawns is dependent on the orientation of the checkpoint. If the checkpoint is backwards, the car will respawn backwards! If your checkpoint is facing the wrong way, use the rotation functions in the <b>Transform</b> menu. This is a really easy mistake to make (I do it all the time), so be careful about this.
 			</div>
-
-			Now, select the checkpoint and press <b>Shift+A</b>. This will attach the checkpoint to the track. This means if you move the track, the checkpoint will follow it. Also, you can press <b>M</b> and move the mouse to move the checkpoint along the track. This method is the best way to place objects while keeping their orientation relative to the road correct. You can also place more checkpoints by duplicating (<b>Ctrl+D</b>) the first one and moving them along the track (this way, you won't have to worry about backwards checkpoints).
+			<p>
+				Now, select the checkpoint and press <b>Shift+A</b>. This will attach the checkpoint to the track. This means if you move the track, the checkpoint will follow it. Also, you can press <b>M</b> and move the mouse to move the checkpoint along the track. This method is the best way to place objects while keeping their orientation relative to the road correct. You can also place more checkpoints by duplicating (<b>Ctrl+D</b>) the first one and moving them along the track (this way, you won't have to worry about backwards checkpoints).
+			</p>
 		</div>
 
 		<span id='basics3'></span>
@@ -82,11 +96,15 @@
 			<div class="big-image">
 				<img class="gfyitem" data-id="AbsoluteBeneficialBream" data-controls="false" />
 			</div>
-			So far we've only used the stock road pieces. Let's try manipulating the road pieces ourselves!<br/><br/>
-
-			Add a new <b>EmpireSplineRoadStraight</b> to the end of the track. You'll notice that there are green rectangles marking the beginning and end of every road piece. These are <b>track nodes</b>. Select the node at the end of the piece you just added. You can manipulate these in any way that you can manipulate any other object!<br/><br/>
-
-			There are three different tools you can use to transform objects: the <b>move</b> tool, the <b>rotate</b> tool, and the <b>scale</b> tool. You can switch between these by pressing <b>W</b>, <b>E</b>, and <b>R</b>, respectively. Try manipulating the nodes in different ways! The tracks will morph to fit the nodes properly. You can also manipulate the nodes between already-placed pieces of track, and it works the same way.
+			<p>
+				So far we've only used the stock road pieces. Let's try manipulating the road pieces ourselves!
+			</p>
+			<p>
+				Add a new <b>EmpireSplineRoadStraight</b> to the end of the track. You'll notice that there are green rectangles marking the beginning and end of every road piece. These are <b>track nodes</b>. Select the node at the end of the piece you just added. You can manipulate these in any way that you can manipulate any other object!
+			</p>
+			<p>
+				There are three different tools you can use to transform objects: the <b>move</b> tool, the <b>rotate</b> tool, and the <b>scale</b> tool. You can switch between these by pressing <b>W</b>, <b>E</b>, and <b>R</b>, respectively. Try manipulating the nodes in different ways! The tracks will morph to fit the nodes properly. You can also manipulate the nodes between already-placed pieces of track, and it works the same way.
+			</p>
 		</div>
 
 		<span id='basics4'></span>
@@ -95,13 +113,18 @@
 			<div class="big-image">
 				<img class="gfyitem" data-id="IckyNegativeLamb" data-controls="false" />
 			</div>
-			Time to add some branching paths. Add an <b>EmpireRoadTriSplit</b> to the end of the track. This piece is different from the previous track pieces we've used in that it has 3 nodes. To add track pieces to a specific node, just click that node and that add the track you want. This works for all sorts of track pieces.<br/><br/>
-
-			Now we want to make the branching paths meet back up later without the track getting crooked. Duplicate the EmpireRoadTriSplit (<b>Ctrl+D</b>). Whenever you duplicate an object, you can move the mouse to move the new object around freely, but we don't want this, so press <b>ESC</b> to exit this mode. Instead, use the move gizmo to move the new EmpireRoadTriSplit in the direction of the track. Then, go to <b>Tools>Rotate Object 180 around Y axis</b> in the menu bar. This flips the object around so it's facing the other way. Move this object as far away from the track as you want.<br/><br/>
-
-			You're going to be able to make your branching paths so they end up pretty close to the second TriSplit, but you won't be able to make them match up exactly. So let's connect some nodes together. To connect two nodes, select the node you want to move, and then hold <b>shift</b> and select the node you want to connect it to. Press <b>ENTER</b> to snap the nodes together. <b>The node you selected first always moves to meet the node you selected second.</b><br/><br/>
-
-			You can also select the road piece itself before selecting the first node. When you press enter, the entire road piece will move to so that the two nodes connect.
+			<p>
+				Time to add some branching paths. Add an <b>EmpireRoadTriSplit</b> to the end of the track. This piece is different from the previous track pieces we've used in that it has 3 nodes. To add track pieces to a specific node, just click that node and that add the track you want. This works for all sorts of track pieces.
+			</p>
+			<p>
+				Now we want to make the branching paths meet back up later without the track getting crooked. Duplicate the EmpireRoadTriSplit (<b>Ctrl+D</b>). Whenever you duplicate an object, you can move the mouse to move the new object around freely, but we don't want this, so press <b>ESC</b> to exit this mode. Instead, use the move gizmo to move the new EmpireRoadTriSplit in the direction of the track. Then, go to <b>Tools>Rotate Object 180 around Y axis</b> in the menu bar. This flips the object around so it's facing the other way. Move this object as far away from the track as you want.
+			</p>
+			<p>
+				You're going to be able to make your branching paths so they end up pretty close to the second TriSplit, but you won't be able to make them match up exactly. So let's connect some nodes together. To connect two nodes, select the node you want to move, and then hold <b>shift</b> and select the node you want to connect it to. Press <b>ENTER</b> to snap the nodes together. <b>The node you selected first always moves to meet the node you selected second.</b>
+			</p>
+			<p>
+				You can also select the road piece itself before selecting the first node. When you press enter, the entire road piece will move to so that the two nodes connect.
+			</p>
 		</div>
 
 		<span id='basics5'></span>
@@ -110,12 +133,15 @@
 			<div class="big-image">
 				<img class="gfyitem" data-id="BadCarelessClownanemonefish" data-controls="false" />
 			</div>
-			Obstacles are placed just like any other object. You can find them in the "Obstacles" folder. Let's add some spinny lasers!<br/><br/>
-
-			Set the cursor to a straight piece of track. Then, go to the "Infected obstacles" folder in the "obstacles" folder, and add a <b>VirusLaserTriCircleRotating</b>. If you want to move it to a curved piece of track, you can attach it to the road (<b>Shift+A</b>) and move it (<b>M</b>) wherever you like, just like with checkpoints.<br/><br/>
-
-			If you test the level (<b>~</b>), you'll notice that the lasers rotate back and forth. You can change the speed of the rotation, among other things. Go back to the editor, and click the obstacle to select it. Then click the <b>properties</b> tab in the menu on the right-hand side. Scroll down to the section "RigidbodyAxisRotationLogic". There, you can change various aspects about how the lasers rotate. Try increasing AngularSpeed and RotationBounds. You can use the arrows on the side of the text field, click and drag, or enter a number directly. Then test the level. The lasers should be rotating farther and faster than before.
-
+			<p>
+				Obstacles are placed just like any other object. You can find them in the "Obstacles" folder. Let's add some spinny lasers!
+			</p>
+			<p>
+				Set the cursor to a straight piece of track. Then, go to the "Infected obstacles" folder in the "obstacles" folder, and add a <b>VirusLaserTriCircleRotating</b>. If you want to move it to a curved piece of track, you can attach it to the road (<b>Shift+A</b>) and move it (<b>M</b>) wherever you like, just like with checkpoints.
+			</p>
+			<p>
+				If you test the level (<b>~</b>), you'll notice that the lasers rotate back and forth. You can change the speed of the rotation, among other things. Go back to the editor, and click the obstacle to select it. Then click the <b>properties</b> tab in the menu on the right-hand side. Scroll down to the section "RigidbodyAxisRotationLogic". There, you can change various aspects about how the lasers rotate. Try increasing AngularSpeed and RotationBounds. You can use the arrows on the side of the text field, click and drag, or enter a number directly. Then test the level. The lasers should be rotating farther and faster than before.
+			</p>
 			<div class="infobox">
 				Every object is made up of different <b>components</b>, and these are what the different sections represent in the properties tab. The component system is just a result of Distance using the Unity engine, and it's not super important for the user. Just know that each section is a different "building block" of the object.
 			</div>
@@ -124,13 +150,16 @@
 		<span id='basics6'></span>
 		<div class="section">
 			<h2>Uploading to Steam Workshop</h2>
-			Is your level done? It's time to upload it, then! First, check a few things:
-			<ul>
-				<li>Make sure your level has a proper title.</li>
-				<li>Make sure you've marked the modes this level can be played in (you can find this in the level settings tab).</li>
-			</ul>
-
-			Position the camera in the editor to be a good preview of the map! This will be used as the thumbnail for the level on the workshop. Once you've done this, click Save and Publish to Steam Workshop in the menu on the right. Also, be sure to edit the description for the level once it's published! Nobody wants to play a track that says it's "an awesome community level."
+			<p>
+				Is your level done? It's time to upload it, then! First, check a few things:
+				<ul>
+					<li>Make sure your level has a proper title.</li>
+					<li>Make sure you've marked the modes this level can be played in (you can find this in the level settings tab).</li>
+				</ul>
+			</p>
+			<p>
+				Position the camera in the editor to be a good preview of the map! This will be used as the thumbnail for the level on the workshop. Once you've done this, click Save and Publish to Steam Workshop in the menu on the right. Also, be sure to edit the description for the level once it's published! Nobody wants to play a track that says it's "an awesome community level."
+			</p>
 		</div>
 
 		<span id='visuals'></span>
@@ -146,32 +175,42 @@
 		<span id="visuals1"></span>
 		<div class="section">
 			<h2>Themes</h2>
-			Its a good idea to work with a theme in mind. There are lots of different ways to combine visual elements and create a unique theme. A level with a unique theme can go long way to making it a better overall level. But there are also loads of really good levels that work with some of the "basic" themes, or even the default theme of Distance! Here are 3 examples of levels with different themes.
+			<p>
+				Its a good idea to work with a theme in mind. There are lots of different ways to combine visual elements and create a unique theme. A level with a unique theme can go long way to making it a better overall level. But there are also loads of really good levels that work with some of the "basic" themes, or even the default theme of Distance! Here are 3 examples of levels with different themes.
+			</p>
 
 			<div class="big-image">
 				<img src="images/screenshots/247.jpg">
 				<b>Broken Symmetry</b> (official level)
 			</div>
 
-			Broken Symmetry uses empire buildings, empire and glass roads, and only a minor change in the overall color scheme. The level is one of the only official levels that uses a greenish color scheme perhaps to convey the feeling of being safe starting out.
+			<p>
+				Broken Symmetry uses empire buildings, empire and glass roads, and only a minor change in the overall color scheme. The level is one of the only official levels that uses a greenish color scheme perhaps to convey the feeling of being safe starting out.
+			</p>
 
 			<div class="big-image">
 				<img src="images/screenshots/contraband.jpg">
 				<b>Contraband Delivery</b> by Quargzon
 			</div>
 
-			Contraband Delivery uses posters with all the colors in the rainbow to simulate a real world city and its commercial billboards. Reflective surfaces are used to illustrate gigantic "office" buildings. It also uses dense fog (to simulate pollution), dark buildings, and a ton of decorational girders.
+			<p>
+				Contraband Delivery uses posters with all the colors in the rainbow to simulate a real world city and its commercial billboards. Reflective surfaces are used to illustrate gigantic "office" buildings. It also uses dense fog (to simulate pollution), dark buildings, and a ton of decorational girders.
+			</p>
 
 			<div class="big-image">
 				<img src="images/screenshots/cubic.jpg">
 				<b>Cubic</b> by Da Ham
 			</div>
 
-			Cubic uses its theme to convey a dystopian future vibe. It uses gray colors with all white-ish emitters and lights. Only one or 2 actual building models and a bright yellow color to capture the players attention whenever needed.<br/><br/>
-
-			As you can see a well thought out theme will not only make your level prettier. It can also help you tell a story or set the mood.<br><br>
-
-			The best themes are the ones tailored for the level they are applied to. So take your time and get the theme just right, so that you feel it accomplishes what you want with the level.
+			<p>
+				Cubic uses its theme to convey a dystopian future vibe. It uses gray colors with all white-ish emitters and lights. Only one or 2 actual building models and a bright yellow color to capture the players attention whenever needed.
+			</p>
+			<p>
+				As you can see a well thought out theme will not only make your level prettier. It can also help you tell a story or set the mood.
+			</p>
+			<p>
+				The best themes are the ones tailored for the level they are applied to. So take your time and get the theme just right, so that you feel it accomplishes what you want with the level.
+			</p>
 		</div>
 
 		<span id="visuals2"></span>
@@ -180,19 +219,22 @@
 			<div class="big-image">
 				<img class="gfyitem" data-id="SpanishIncompleteDorking" data-controls="false" />
 			</div>
-			Utilizing colours is an important part of level editing in Distance. All of the objects are made up of different components, some of which represent behavior and some of which are physical components. Many of the physical components have color properties you can change. The different properties are:
-			<ul>
-				<li><b>Color</b>: This usually refers to the largest continuous part of the object. In the case of buildings its a good idea to set this to something that's easy on the eyes, as this will be one of the most prominent colors in your level.</li>
-				<li><b>Spec color</b>: This is the reflective value. Its layered on top of the "color" of the object and is only shown relative to what angle the player camera is looking at it from.</li>
-				<li><b>Emit color</b>: This slot often refers to a "glowing" part of the object, and its a really good place to enforce the bright and most prominent colors of your overall theme.</li>
-			</ul>
+			<p>
+				Utilizing colours is an important part of level editing in Distance. All of the objects are made up of different components, some of which represent behavior and some of which are physical components. Many of the physical components have color properties you can change. The different properties are:
+				<ul>
+					<li><b>Color</b>: This usually refers to the largest continuous part of the object. In the case of buildings its a good idea to set this to something that's easy on the eyes, as this will be one of the most prominent colors in your level.</li>
+					<li><b>Spec color</b>: This is the reflective value. Its layered on top of the "color" of the object and is only shown relative to what angle the player camera is looking at it from.</li>
+					<li><b>Emit color</b>: This slot often refers to a "glowing" part of the object, and its a really good place to enforce the bright and most prominent colors of your overall theme.</li>
+				</ul>
+			</p>
 		</div>
 
 		<span id="visuals3"></span>
 		<div class="section">
 			<h2>Decorations</h2>
-			Let's start by placing a lamp on the track. First move the cursor so it's on the side (or railing) of the track you want the lamp to be on. Add an <b>EmpireLamp</b> from the "Decorations" folder. Once you placed the lamp make sure it looks like its actually connected to the track! Use Alt + S to rotate it correctly, and use the movement gizmos to get the alignment just right. Once it looks like it's actually connected to the track, attach it (<b>Shift + A</b>). Once we have done this it will follow the road if we move it and we can easily duplicate it just like the checkpoints.
-
+			<p>
+				Let's start by placing a lamp on the track. First move the cursor so it's on the side (or railing) of the track you want the lamp to be on. Add an <b>EmpireLamp</b> from the "Decorations" folder. Once you placed the lamp make sure it looks like its actually connected to the track! Use Alt + S to rotate it correctly, and use the movement gizmos to get the alignment just right. Once it looks like it's actually connected to the track, attach it (<b>Shift + A</b>). Once we have done this it will follow the road if we move it and we can easily duplicate it just like the checkpoints.
+			</p>
 			<div class="infobox">
 				Once you attach an object to the track, you can press <b>M</b> and then <b>F</b> to flip it to the other side of the track. This is really useful for putting lamps on the other side of the track. Use this in combination with duplicating them to easily place lamps throughout the level.
 			</div>
@@ -201,8 +243,9 @@
 		<span id="visuals4"></span>
 		<div class="section">
 			<h2>Buildings</h2>
-			Adding buildings is simple. First, go to the <b>"Buildings"</b> folder in the library. Once you've found the building you want to add, double click it to spawn it at the cursor location. You can then move and rotate the building to where you want them using the move, rotate, and scale gizmos.
-
+			<p>
+				Adding buildings is simple. First, go to the <b>"Buildings"</b> folder in the library. Once you've found the building you want to add, double click it to spawn it at the cursor location. You can then move and rotate the building to where you want them using the move, rotate, and scale gizmos.
+			</p>
 			<div class="infobox">
 				When placing buildings try to think of them as a background in a painting. Try moving the camera so you see what the car will approximately see, and then place your buildings so they create a "scenery" for the car to drive through. Also, you can't have a lot of blank "canvas" in your painting. So try testing the track and look for empty spots you could fill out with buildings. Striking a good balance between too many or too few buildings is important!
 			</div>
@@ -211,19 +254,24 @@
 		<span id="visuals5"></span>
 		<div class="section">
 			<h2>Performance</h2>
-			Be careful when decorating your level. Putting too many objects in a level will make it lose FPS (frames per second). That's why it's generally a good idea to always have the frames per second counter showing. To enable it press <b>ALT + F10</b>.<br/><br/>
-
-			Loss of frames can happen for multiple reasons:
-			<ul>
-				<li><b>Placing too many objects in a level overall.</b> It won't matter if they are not always seen or within the visible draw distance. Too many objects will lower the FPS, so try to pace yourself.</li>
-				<li><b>Too many objects in the visible frame.</b> On the other hand loss of frames can also occur from having the game draw too much stuff at once. If you ever encountered that a level suddenly played at a smooth 60 FPS and then dropped to 20, that's because there was just a section of the level where there was too much stuff going on, but now that the game doesn't have to draw it anymore, everything is fine.</li>
-				<li><b>Too many light sources.</b> Light casts shadows (for those who have shadows enabled anyways), and having to draw too many shadows at once can impact your FPS.</li>
-				<li><b>Too many anything technical.</b> Generally objects that move or have a technical function (like lasers fx) will impact your FPS if you put too many of them in your level.</li>
-			</ul>
-
-			Caring about your FPS is very important. Especially because a lot of people play distance on different computers. One level that works 100% flawlessly on one computer might be completely un-playable on another. So even if you are just getting a tiny decrease in your FPS after adding 200 buildings to your level, it's still worth considering decreasing that again if you are on a good computer.</br></br>
-
-			Its hard to set a bar for what's an acceptable FPS in any given community level. Just remember, playability MUST come first.
+			<p>
+				Be careful when decorating your level. Putting too many objects in a level will make it lose FPS (frames per second). That's why it's generally a good idea to always have the frames per second counter showing. To enable it press <b>ALT + F10</b>.
+			</p>
+			<p>
+				Loss of frames can happen for multiple reasons:
+				<ul>
+					<li><b>Placing too many objects in a level overall.</b> It won't matter if they are not always seen or within the visible draw distance. Too many objects will lower the FPS, so try to pace yourself.</li>
+					<li><b>Too many objects in the visible frame.</b> On the other hand loss of frames can also occur from having the game draw too much stuff at once. If you ever encountered that a level suddenly played at a smooth 60 FPS and then dropped to 20, that's because there was just a section of the level where there was too much stuff going on, but now that the game doesn't have to draw it anymore, everything is fine.</li>
+					<li><b>Too many light sources.</b> Light casts shadows (for those who have shadows enabled anyways), and having to draw too many shadows at once can impact your FPS.</li>
+					<li><b>Too many anything technical.</b> Generally objects that move or have a technical function (like lasers fx) will impact your FPS if you put too many of them in your level.</li>
+				</ul>
+			</p>
+			<p>
+				Caring about your FPS is very important. Especially because a lot of people play distance on different computers. One level that works 100% flawlessly on one computer might be completely un-playable on another. So even if you are just getting a tiny decrease in your FPS after adding 200 buildings to your level, it's still worth considering decreasing that again if you are on a good computer.
+			</p>
+			<p>
+				Its hard to set a bar for what's an acceptable FPS in any given community level. Just remember, playability MUST come first.
+			</p>
 		</div>
 
 		<span id='design'></span>
@@ -237,23 +285,28 @@
 		<span id="design1"></span>
 		<div class="section">
 			<h2>Difficulty</h2>
-			Hard levels are good! But there's good hard and bad hard. You'll always be better at your own level than everyone else will, so when you're trying to gauge the difficulty of your track, try to put yourself into other people's shoes. Here's some basic guidelines:
-			<ul>
-				<li>Try to keep the difficulty relatively consistent throughout the level.</li>
-				<li>Make sure people have enough time to react to obstacles. For example, don't have popup blockers that pop up without enough warning, don't have road transfers that are too close to each other, etc.</li>
-				<li>Use arrows to guide the player when the path through the level is ambiguous.</li>
-			</ul>
-
-			Think about how hard the level is to you. In all likelihood, it's going to be a few notches harder for everyone else, so keep this in mind!
+			<p>
+				Hard levels are good! But there's good hard and bad hard. You'll always be better at your own level than everyone else will, so when you're trying to gauge the difficulty of your track, try to put yourself into other people's shoes. Here's some basic guidelines:
+				<ul>
+					<li>Try to keep the difficulty relatively consistent throughout the level.</li>
+					<li>Make sure people have enough time to react to obstacles. For example, don't have popup blockers that pop up without enough warning, don't have road transfers that are too close to each other, etc.</li>
+					<li>Use arrows to guide the player when the path through the level is ambiguous.</li>
+				</ul>
+			</p>
+			<p>
+				Think about how hard the level is to you. In all likelihood, it's going to be a few notches harder for everyone else, so keep this in mind!
+			</p>
 		</div>
 
 		<span id="design2"></span>
 		<div class="section">
 			<h2>Heat management</h2>
-			In some racing games, the boost is something you use occasionally when you want to go extra fast. In Distance, it's something you want to use <b>constantly</b>. However, boosting causes your car to heat up and eventually overheat, and the only things that can cool you down are cooldown rings, checkpoints, and tricks.<br/><br/>
-
-			So if you want the player to be boosting all the time, you should put in plenty of cooldown rings and checkpoints! It's pretty easy to do this right, just test your level and make sure you can get through the whole thing without overheating. It feels even better if your cooldown rings and checkpoints are spaced out so you're almost overheating as you reach them, but that's not super important.
-
+			<p>
+				In some racing games, the boost is something you use occasionally when you want to go extra fast. In Distance, it's something you want to use <b>constantly</b>. However, boosting causes your car to heat up and eventually overheat, and the only things that can cool you down are cooldown rings, checkpoints, and tricks.
+			</p>
+			<p>
+				So if you want the player to be boosting all the time, you should put in plenty of cooldown rings and checkpoints! It's pretty easy to do this right, just test your level and make sure you can get through the whole thing without overheating. It feels even better if your cooldown rings and checkpoints are spaced out so you're almost overheating as you reach them, but that's not super important.
+			</p>
 			<div class="infobox">
 				Long stretches of road can act as places to cooldown, as people can take the opportunity to do tricks while they're not busy avoiding obstacles.
 			</div>
@@ -262,20 +315,25 @@
 		<span id="design3"></span>
 		<div class="section">
 			<h2>Skips</h2>
-			Skips. The bane of casual players everywhere!<br/><br/>
-
-			Skips are a reality of virtually every Distance map. Unless your map is a straight line, there will be some way to cut corners and skip things. Understandably, this is disappointing to map makers, as people can skip over the track they worked so hard on. It's also disappointing to casual players who feel like they can't compete with people who know skips.<br/><br/>
-
-			However, skips are not a bad thing! There is beauty and creativity in breaking the intended path of a track, and more importantly, you really can't prevent skips in Distance. The car has rotational thrusters, a powerful booster, and wings. If a player wants to go somewhere, there's nothing you can really do to stop them. So embrace the skips! Skips are fun and good.<br/><br/>
-
-			That being said, there's still things you can and should do to prevent really egregious skips. Here are some good principles:
-			<ul>
-				<li>Avoid having the track loop back on itself. This is just asking for someone to jump up onto the higher/lower track and skip a bunch of stuff.</li>
-				<li>Keep the track on a relatively straight path. That doesn't mean not to have turns, but the more curves you have, the more a player can cut across those curves. Keep the curves shallow.</li>
-				<li>Uphill tracks are harder to skip than downhill tracks.</li>
-				<li>Add shortcuts! Now they're intentional, so they're not skips.</li>
-				<li>Turning off the car's abilities (boosters, rotational thrusters, and jumping) is not generally an effective way to prevent skips. It's one thing to do it for thematic reasons, but doing it just to prevent skips will just making your level less fun.
-			</ul>
+			<p>
+				Skips. The bane of casual players everywhere!
+			</p>
+			<p>
+				Skips are a reality of virtually every Distance map. Unless your map is a straight line, there will be some way to cut corners and skip things. Understandably, this is disappointing to map makers, as people can skip over the track they worked so hard on. It's also disappointing to casual players who feel like they can't compete with people who know skips.
+			</p>
+			<p>
+				However, skips are not a bad thing! There is beauty and creativity in breaking the intended path of a track, and more importantly, you really can't prevent skips in Distance. The car has rotational thrusters, a powerful booster, and wings. If a player wants to go somewhere, there's nothing you can really do to stop them. So embrace the skips! Skips are fun and good.
+			</p>
+			<p>
+				That being said, there's still things you can and should do to prevent really egregious skips. Here are some good principles:
+				<ul>
+					<li>Avoid having the track loop back on itself. This is just asking for someone to jump up onto the higher/lower track and skip a bunch of stuff.</li>
+					<li>Keep the track on a relatively straight path. That doesn't mean not to have turns, but the more curves you have, the more a player can cut across those curves. Keep the curves shallow.</li>
+					<li>Uphill tracks are harder to skip than downhill tracks.</li>
+					<li>Add shortcuts! Now they're intentional, so they're not skips.</li>
+					<li>Turning off the car's abilities (boosters, rotational thrusters, and jumping) is not generally an effective way to prevent skips. It's one thing to do it for thematic reasons, but doing it just to prevent skips will just making your level less fun.
+				</ul>
+			</p>
 		</div>
 
 		<span id='glossary'></span>
@@ -286,7 +344,7 @@
 
 			<div class="left-image">
 				<img src="images/glossary/cursor.png"/>
-				<b>The cursor</b>: The cursor is where your mouse cursor or "hand" is placed in the level. Objects that you double click on in the library will be spawned at the cursor.<br/><br/>
+				<b>The cursor</b>: The cursor is where your mouse cursor or "hand" is placed in the level. Objects that you double click on in the library will be spawned at the cursor.
 			</div>
 
 			<div class="left-image-separator"></div>
@@ -400,7 +458,7 @@
 
 		<div class="section">
 			<h2>Credits</h2>
-			This guide is written by Krispy (@KrispyVG) and Tesselode (@aspinach). Banner art by Jam (@QuixoticJam).<br/><br/>
+			This guide is written by Krispy (@KrispyVG) and Tesselode (@aspinach). Banner art by Jam (@QuixoticJam).
 
 			People who also helped:
 			<ul>
