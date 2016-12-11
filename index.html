@@ -288,7 +288,10 @@
 				<ul>
 					<li><b>Placing too many objects in a level overall.</b> It won't matter if they are not always seen or within the visible draw distance. Too many objects will lower the FPS, so try to pace yourself.</li>
 					<li><b>Too many objects in the visible frame.</b> On the other hand loss of frames can also occur from having the game draw too much stuff at once. If you ever encountered that a level suddenly played at a smooth 60 FPS and then dropped to 20, that's because there was just a section of the level where there was too much stuff going on, but now that the game doesn't have to draw it anymore, everything is fine.</li>
-					<li><b>Too many light sources.</b> Light casts shadows (for those who have shadows enabled anyways), and having to draw too many shadows at once can impact your FPS.</li>
+					<li><b>Too many light sources.</b> when the scene is rendered each object has to work out
+					how the light hiting it is drawn. The performance hit you take from this is roughly described
+					by: # of lights &times # of objects illuminated. So decreasing either one of these numbers will
+					increase your performance</li>
 					<li><b>Too many anything technical.</b> Generally objects that move or have a technical function (like lasers fx) will impact your FPS if you put too many of them in your level.</li>
 				</ul>
 			</p>
